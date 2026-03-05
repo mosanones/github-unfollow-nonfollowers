@@ -1,6 +1,0 @@
-
-## 2. requirements.txt
-
-```txt
-requests>=2.28.0
-python-dotenv>=0.19.0
