@@ -40,6 +40,8 @@ pip install -r requirements.txt
 
 Go to [github.com/settings/tokens](https://github.com/settings/tokens) and create a new token with the **`user:follow`** scope enabled. Copy the token — you won't be able to see it again.
 
+> **Tip:** I recommend using a fine-grained personal access token (set to expire in 90 days) instead of a classic token for better security.
+
 ---
 
 ## Usage
