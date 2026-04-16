@@ -73,7 +73,9 @@ cp .env.example .env
 ## Testing
 Run tests before submitting
 ```bash
-python -m pytest tests/
+python -m pytest tests/ -v
 ```
+
+> **Note (personal):** I also run `python -m pytest tests/ -v --tb=short` locally to get cleaner tracebacks when debugging failures.
 
 **Thank you for contributing! 🚀**
