@@ -11,7 +11,7 @@ GITHUB_USERNAME = os.getenv('GITHUB_USERNAME', 'your_username_here')
 # API configuration
 API_BASE_URL = os.getenv('API_BASE_URL', 'https://api.github.com')
 REQUEST_TIMEOUT = int(os.getenv('API_TIMEOUT', 10))  # seconds
-RATE_LIMIT_SLEEP = float(os.getenv('RATE_LIMIT_SLEEP', 1.0))  # seconds between requests - increased to be safer with rate limits
+RATE_LIMIT_SLEEP = float(os.getenv('RATE_LIMIT_SLEEP', 1.5))  # seconds between requests - bumped up slightly to avoid hitting rate limits
 
 # Application settings
 PREVIEW_MODE_DEFAULT = True  # Preview by default for safety
