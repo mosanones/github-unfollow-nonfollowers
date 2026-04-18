@@ -59,6 +59,10 @@ class GitHubClient:
         if response.status_code == 401:
             print(f"  [!] Authentication error - check your GITHUB_TOKEN")
             return False
+        # 403 can happen if we're hitting rate limits
+        if response.status_code == 403:
+            print(f"  [!] Rate limited or forbidden - try again later")
+            return False
         print(f"  [!] Failed to unfollow {username}: HTTP {response.status_code}")
         return False
 
