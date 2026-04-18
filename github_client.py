@@ -59,4 +59,7 @@ class GitHubClient:
         """Return users the authenticated user follows who don't follow back."""
         followers = self.get_followers()
         following = self.get_following()
-        return following - followers
+        non_followers = following - followers
+        # Print a quick summary so I can see the numbers at a glance
+        print(f"  [i] Following: {len(following)}, Followers: {len(followers)}, Not following back: {len(non_followers)}")
+        return non_followers
