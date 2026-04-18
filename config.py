@@ -16,3 +16,7 @@ RATE_LIMIT_SLEEP = float(os.getenv('RATE_LIMIT_SLEEP', 5.0))  # bumped to 5s to 
 # Application settings
 PREVIEW_MODE_DEFAULT = True  # Preview by default for safety
 MAX_RETRIES = 5  # bumped up retries since GitHub API can be flaky sometimes
+
+# Personal note: keeping a whitelist of accounts I want to keep following
+# even if they don't follow me back (e.g. maintainers of projects I use)
+WHITELIST = os.getenv('WHITELIST', '').split(',') if os.getenv('WHITELIST') else []
