@@ -16,7 +16,7 @@ install:
 	pip install -r requirements-dev.txt
 
 test:
-	pytest tests/ -v --cov=. --cov-report=term-missing
+	pytest tests/ -v --cov=. --cov-report=term-missing --cov-report=html
 
 run:
 	python unfollow_nonfollowers.py
