@@ -110,10 +110,11 @@ Unfollow all 58 users? [yes/no]: yes
 - Your token is never stored — it's only held in memory for the duration of the script.
 - GitHub's API allows up to **5,000 requests per hour** for authenticated users. The script is well within those limits for typical use.
 - You can safely re-run the script at any time — it only unfollows, never follows.
-- **Personal note:** I store my token in a `.env` file and load it with `python-dotenv` so I don't have to paste it every run. Just add `GITHUB_TOKEN=your_token_here` to a `.env` file (and make sure `.env` is in your `.gitignore`!).
+- **Personal note:** I store my token in a `.env` file and load it with `python-dotenv` so I don't have to paste it every run. Just add a `.env` file in the project root with the following contents:
 
----
+```
+GITHUB_USERNAME=your_username
+GITHUB_TOKEN=your_token_here
+```
 
-## License
-
-MIT
+Then make sure `.env` is listed in your `.gitignore` so you never accidentally commit your token.
