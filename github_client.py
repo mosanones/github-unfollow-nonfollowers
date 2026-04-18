@@ -52,6 +52,9 @@ class GitHubClient:
         time.sleep(REQUEST_DELAY)
         if response.status_code == 204:
             return True
+        # 404 means we weren't following them anyway, treat as success
+        if response.status_code == 404:
+            return True
         print(f"  [!] Failed to unfollow {username}: HTTP {response.status_code}")
         return False
 
