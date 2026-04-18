@@ -55,6 +55,10 @@ class GitHubClient:
         # 404 means we weren't following them anyway, treat as success
         if response.status_code == 404:
             return True
+        # 401 likely means the token is invalid or expired
+        if response.status_code == 401:
+            print(f"  [!] Authentication error - check your GITHUB_TOKEN")
+            return False
         print(f"  [!] Failed to unfollow {username}: HTTP {response.status_code}")
         return False
 
