@@ -42,6 +42,17 @@ Go to [github.com/settings/tokens](https://github.com/settings/tokens) and creat
 
 > **Tip:** I recommend using a fine-grained personal access token (set to expire in 90 days) instead of a classic token for better security.
 
+**4. Set up your `.env` file**
+
+Create a `.env` file in the project root so you don't have to paste your credentials every run:
+
+```
+GITHUB_USERNAME=your_username
+GITHUB_TOKEN=your_token_here
+```
+
+> Make sure `.env` is listed in your `.gitignore` — never commit your token.
+
 ---
 
 ## Usage
@@ -110,11 +121,4 @@ Unfollow all 58 users? [yes/no]: yes
 - Your token is never stored — it's only held in memory for the duration of the script.
 - GitHub's API allows up to **5,000 requests per hour** for authenticated users. The script is well within those limits for typical use.
 - You can safely re-run the script at any time — it only unfollows, never follows.
-- **Personal note:** I store my token in a `.env` file and load it with `python-dotenv` so I don't have to paste it every run. Just add a `.env` file in the project root with the following contents:
-
-```
-GITHUB_USERNAME=your_username
-GITHUB_TOKEN=your_token_here
-```
-
-Then make sure `.env` is listed in your `.gitignore` so you never accidentally commit your token.
+- **Personal note:** I store my token in a `.env` file and load it with `python-dotenv` so I don't have to paste it every run. See step 4 in Setup above.
