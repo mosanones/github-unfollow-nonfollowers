@@ -119,6 +119,11 @@ Unfollow all 58 users? [yes/no]: yes
 ## Notes
 
 - Your token is never stored — it's only held in memory for the duration of the script.
-- GitHub's API allows up to **5,000 requests per hour** for authenticated users. The script is well within those limits for typical use.
-- You can safely re-run the script at any time — it only unfollows, never follows.
-- **Personal note:** I store my token in a `.env` file and load it with `python-dotenv` so I don't have to paste it every run. See step 4 in Setup above.
+- GitHub's API allows up to **5,000 requests per hour** for authenticated users.
+- If you only want to preview who isn't following you back without unfollowing anyone, just enter `no` at the confirmation prompt.
+
+---
+
+## Personal Notes
+
+Forked this for my own use. Works great as-is — I mainly run it every few weeks to keep my following list clean.
