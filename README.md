@@ -120,10 +120,10 @@ Unfollow all 58 users? [yes/no]: yes
 
 - Your token is never stored — it's only held in memory for the duration of the script.
 - GitHub's API allows up to **5,000 requests per hour** for authenticated users.
-- If you hit the rate limit mid-run, the script will pause and wait for it to reset before continuing.
+- If you just want to **see** who isn't following you back without unfollowing anyone, enter `no` at the confirmation prompt.
 
 ---
 
 ## Personal Notes
 
-Forked this for my own use. Works great as-is — I mainly use it after follower cleanups. One thing I noticed: if you cancel mid-run (Ctrl+C), some users may already have been unfollowed before the script stops, so double-check your following list afterward if that happens.
+Forked this for my own use. Works great as-is — I mainly use it after follow-for-follow sprees to clean up my following list.
