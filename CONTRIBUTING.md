@@ -80,4 +80,6 @@ python -m pytest tests/ -v
 
 > **Note (personal):** When setting up the `.env` file, make sure the token has at least `read:user` and `user:follow` scopes — I kept running into silent auth failures until I double-checked this in the GitHub token settings.
 
+> **Note (personal):** If you're on Windows and `source venv/bin/activate` doesn't work, use `venv\Scripts\activate` instead (no `source` prefix). Took me an embarrassingly long time to remember this the first time I set this up on a Windows machine.
+
 **Thank you for contributing! 🚀**
