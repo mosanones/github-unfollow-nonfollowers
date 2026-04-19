@@ -78,4 +78,6 @@ python -m pytest tests/ -v
 
 > **Note (personal):** I also run `python -m pytest tests/ -v --tb=short` locally to get cleaner tracebacks when debugging failures. Additionally, `python -m pytest tests/ -v --tb=short -x` is handy to stop on the first failure and avoid scrolling through a wall of errors. For a quick coverage check, `python -m pytest tests/ -v --tb=short --cov=.` is useful too.
 
+> **Note (personal):** When setting up the `.env` file, make sure the token has at least `read:user` and `user:follow` scopes — I kept running into silent auth failures until I double-checked this in the GitHub token settings.
+
 **Thank you for contributing! 🚀**
