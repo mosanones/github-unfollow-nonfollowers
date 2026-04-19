@@ -37,11 +37,11 @@ clean:
 	find . -type d -name "htmlcov" -exec rm -rf {} +
 
 lint:
-	flake8 unfollow_nonfollowers.py tests/
+	flake8 unfollow_nonfollowers.py tests/ --max-line-length=100
 	mypy unfollow_nonfollowers.py --ignore-missing-imports
 
 format:
-	black unfollow_nonfollowers.py tests/
+	black unfollow_nonfollowers.py tests/ --line-length 100
 
 security:
 	bandit -r unfollow_nonfollowers.py
